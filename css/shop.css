@@ -57,10 +57,14 @@ header {
 
 .box-product .productshop-grid {
   width: 75%;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding: 20px;
+}
+
+.box-product .productshop-grid[tab="1"] {
+  display: grid;
 }
 
 .pagination {

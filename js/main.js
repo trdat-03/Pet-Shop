@@ -1,5 +1,5 @@
 let currentSlide = 0;
-
+console.log(123);
 function showSlide(index) {
   const slides = document.querySelectorAll(".slide");
   const totalSlides = slides.length;
@@ -56,3 +56,55 @@ window.onclick = function (event) {
     registerModal.style.display = "none";
   }
 };
+
+// xử lí phân trang
+
+function showProductGrid(tabNumber) {
+  const productGrids = document.querySelectorAll(".productshop-grid");
+  productGrids.forEach((grid) => {
+    grid.style.display = "none";
+  });
+
+  const selectedGrid = document.querySelector(
+    `.productshop-grid[tab="${tabNumber}"]`
+  );
+  if (selectedGrid) {
+    selectedGrid.style.display = "grid";
+  }
+
+  const pageButtons = document.querySelectorAll(".page-btn");
+  pageButtons.forEach((btn) => {
+    btn.classList.remove("active");
+    if (btn.getAttribute("tab") === tabNumber.toString()) {
+      btn.classList.add("active");
+    }
+  });
+}
+document.addEventListener("DOMContentLoaded", function () {
+  showProductGrid(1);
+  const pageButtons = document.querySelectorAll(".page-btn[tab]");
+  pageButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tabNumber = btn.getAttribute("tab");
+      showProductGrid(parseInt(tabNumber));
+    });
+  });
+
+  const prevBtn = document.querySelector(".prev-btn");
+  prevBtn.addEventListener("click", () => {
+    const currentTab = document.querySelector(".page-btn.active");
+    const currentTabNumber = parseInt(currentTab.getAttribute("tab"));
+    if (currentTabNumber > 1) {
+      showProductGrid(currentTabNumber - 1);
+    }
+  });
+  const nextBtn = document.querySelector(".next-btn");
+  nextBtn.addEventListener("click", () => {
+    const currentTab = document.querySelector(".page-btn.active");
+    const currentTabNumber = parseInt(currentTab.getAttribute("tab"));
+    const maxTab = 3; // Số lượng tab hiện có
+    if (currentTabNumber < maxTab) {
+      showProductGrid(currentTabNumber + 1);
+    }
+  });
+});

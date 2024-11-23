@@ -60,6 +60,11 @@
   display: flex;
 }
 
+.header__bottom-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
 .header__bottom-menu div {
   margin: 0 15px 0 15px;
 }
