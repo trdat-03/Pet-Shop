@@ -1,0 +1,100 @@
+:root {
+  --main-color: #f87537;
+}
+
+.body .title {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.divtable {
+  width: 100%;
+  min-height: 700px;
+}
+
+.product-table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 30px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+  background-color: #f8753752;
+}
+
+.product-table td div {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  max-width: 100px;
+}
+
+.product-table td div i {
+  background-color: var(--main-color);
+  padding: 8px;
+  border-radius: 50%;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.product-table td div p {
+  font-size: 20px;
+}
+
+.product-table td input {
+  width: 30px;
+  height: 30px;
+}
+
+.total-order {
+  width: 100%;
+  padding: 0 100px;
+  height: 200px;
+  background-color: #f8753752;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.total-order div {
+  display: flex;
+}
+.total-order p {
+  font-size: 20px;
+  margin-right: 40px;
+}
+
+.total-order h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+.total-order .btn_order {
+  margin-top: 20px;
+  width: 140px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--main-color);
+}

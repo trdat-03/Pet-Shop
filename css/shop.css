@@ -1,0 +1,110 @@
+:root {
+  --main-color: #f87537;
+}
+
+.body {
+  width: 90%;
+  margin: auto;
+}
+
+.body p {
+  color: #6c757d;
+  font-size: 18px;
+}
+
+.body h1 {
+  color: var(--main-color);
+  font-size: 30px;
+}
+
+.banner {
+  border-radius: 20px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+.banner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.arrange {
+  display: flex;
+  justify-content: end;
+}
+
+.arrange p {
+  margin-right: 10px;
+}
+
+.arrange select {
+  border: 1px solid #6c757d;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.box-product {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  width: 100%;
+}
+
+.box-product .productshop-grid {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.page-btn {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+
+.page-btn.active {
+  background-color: var(--main-color);
+  color: #fff;
+  border-color: var(--main-color);
+}
+
+.prev-btn,
+.next-btn {
+  font-weight: bold;
+}
+
+.dots {
+  padding: 8px 12px;
+  color: #888;
+}
+
+.box-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
